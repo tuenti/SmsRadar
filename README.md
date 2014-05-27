@@ -7,7 +7,7 @@ this is your library.
 
 This Android library offers you two main classes to use to start listening text messages. SMS Radar is implemented in
 top of an Android service. To start / stop listening text messages use ``SmsRadar.initializeSmsRadarService(context,
-listener)` with a Context instance and a ``SmsListener``implementation.
+listener)`` with a ``Context`` instance and a ``SmsListener`` implementation.
 
 Each time the device owner receives one SMS the ``SmsListener`` used to initialize ``SmsRadarService`` service will be
 notified in on ``onSmsSent(Sms sms)`` or ``onSmsReceived(Sms sms)`` methods.
