@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+		 xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
+	<modelVersion>4.0.0</modelVersion>
+
+	<parent>
+		<groupId>com.tuenti.smsradar</groupId>
+		<artifactId>smsradar-parent</artifactId>
+		<version>1.0.3</version>
+	</parent>
+
+	<artifactId>sample</artifactId>
+	<packaging>apk</packaging>
+
+	<name>SMS Radar</name>
+
+	<dependencies>
+
+		<dependency>
+			<groupId>com.tuenti.smsradar</groupId>
+			<artifactId>library</artifactId>
+		</dependency>
+
+	</dependencies>
+
+
+	<build>
+		<plugins>
+			<plugin>
+				<groupId>com.jayway.maven.plugins.android.generation2</groupId>
+				<artifactId>android-maven-plugin</artifactId>
+				<extensions>true</extensions>
+			</plugin>
+		</plugins>
+	</build>
+
+</project>
