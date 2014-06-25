@@ -24,9 +24,25 @@ This library works on Android 2.X or higher versions.
 Download
 --------
 
-This library will be available on Maven Central Repository asap. If you want to use this library right now you can
-download this repository and compile it using Maven: ``mvn clean install``. Import the ``jar`` generated into your
-local repository and use it.
+Download the project, compile it using ```mvn clean install``` import ``smsradar-1.0.4.jar`` into your project.
+
+Or declare it into your pom.xml
+
+```xml
+<dependency>
+    <groupId>com.tuenti.smsradar</groupId>
+    <artifactId>library</artifactId>
+    <version>1.0.4</version>
+</dependency>
+```
+
+
+Or into your build.gradle
+```groovy
+dependencies{
+    compile 'com.tuenti.smsradar:library:1.0.4'
+}
+```
 
 
 Usage
