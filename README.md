@@ -1,4 +1,4 @@
-SMS Radar [![Build Status](https://travis-ci.org/tuenti/SmsRadar.svg?branch=master)](https://travis-ci.org/tuenti/SmsRadar) [![Android Arsenal](https://img.shields.io/badge/Android%20Arsenal-SmsRadar-brightgreen.svg?style=flat)](https://android-arsenal.com/details/1/1328)
+SMS Radar [![Build Status](https://travis-ci.org/tuenti/SmsRadar.svg?branch=master)](https://travis-ci.org/tuenti/SmsRadar) [![Maven Central](https://maven-badges.herokuapp.com/maven-central/com.tuenti.smsradar/library/badge.svg)](https://maven-badges.herokuapp.com/maven-central/com.tuenti.smsradar/library) [![Android Arsenal](https://img.shields.io/badge/Android%20Arsenal-SmsRadar-brightgreen.svg?style=flat)](https://android-arsenal.com/details/1/1328)
 =========
 
 Read incoming and outgoing text messages using an Android application across different Android SDK versions it's not
