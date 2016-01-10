@@ -13,7 +13,7 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-package com.tuenti.smsradar;
+package org.vaslabs.smsradar;
 
 
 import java.util.Date;
@@ -26,6 +26,8 @@ import org.mockito.Mock;
 import org.mockito.MockitoAnnotations;
 import org.robolectric.Robolectric;
 import org.robolectric.RobolectricTestRunner;
+import org.robolectric.Shadows;
+import org.robolectric.internal.bytecode.RobolectricInternals;
 import org.robolectric.shadows.ShadowIntent;
 import org.robolectric.shadows.ShadowPendingIntent;
 
@@ -111,8 +113,8 @@ public class SmsRadarServiceTest {
 		verify(mockedAlarmManager).set(eq(AlarmManager.RTC_WAKEUP), eq(ANY_TIME + ONE_SECOND),
 				pendingIntentArgumentCaptor.capture());
 		PendingIntent capturedPendingIntent = pendingIntentArgumentCaptor.getValue();
-		ShadowPendingIntent pendingIntent = Robolectric.shadowOf(capturedPendingIntent);
-		ShadowIntent intent = Robolectric.shadowOf(pendingIntent.getSavedIntent());
+		ShadowPendingIntent pendingIntent = Shadows.shadowOf(capturedPendingIntent);
+		ShadowIntent intent = Shadows.shadowOf(pendingIntent.getSavedIntent());
 		assertEquals(SmsRadarService.class, intent.getIntentClass());
 	}
 
