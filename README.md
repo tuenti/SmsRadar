@@ -14,7 +14,8 @@ allprojects {
 
 ```groovie
 dependencies{
-	compile 'com.github.vaslabs:SmsRadar:2.0.1'}
+	compile 'com.github.vaslabs:SmsRadar:2.0.1'
+}
 ```
 
 ## Declare SmsRadar service in your AndroidManifest:
