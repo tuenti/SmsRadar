@@ -27,4 +27,4 @@ proguard/
 res/values/uncommited_strings.xml
 app/src/main/res/values/uncommited_strings.xml
 .idea/
-sdc.iml
+*.iml
