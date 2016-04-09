@@ -13,28 +13,21 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-package org.vaslabs.smsradar;
+package com.tuenti.smsradar;
+
+import java.util.Date;
 
 /**
- * This interface has to be implemented to be notified when an sms be received or sent.
+ * Class created to work as time provider. This entity returns the current date. Avoid the client code to use System
+ * .currentTimeMillis or create a new Date object directly.
  *
- * @author Pedro Vcente Gómez Sánchez <pgomez@tuenti.com>
+ * @author Pedro Vicente Gómez Sánchez <pgomez@tuenti.com>
  * @author Manuel Peinado <mpeinado@tuenti.com>
  */
-public interface SmsListener {
+class TimeProvider {
 
-	/**
-	 * Invoked when an incoming sms is intercepted.
-	 *
-	 * @param sms intercepted.
-	 */
-	public void onSmsSent(Sms sms);
-
-	/**
-	 * Invoked when an outgoing sms is intercepted.
-	 *
-	 * @param sms
-	 */
-	public void onSmsReceived(Sms sms);
+	public Date getDate() {
+		return new Date();
+	}
 
 }

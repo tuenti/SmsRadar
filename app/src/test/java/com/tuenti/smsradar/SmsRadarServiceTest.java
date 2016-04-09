@@ -13,7 +13,7 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-package org.vaslabs.smsradar;
+package com.tuenti.smsradar;
 
 
 import java.util.Date;
@@ -24,16 +24,13 @@ import org.junit.runner.RunWith;
 import org.mockito.ArgumentCaptor;
 import org.mockito.Mock;
 import org.mockito.MockitoAnnotations;
-import org.robolectric.Robolectric;
 import org.robolectric.RobolectricTestRunner;
 import org.robolectric.Shadows;
-import org.robolectric.internal.bytecode.RobolectricInternals;
 import org.robolectric.shadows.ShadowIntent;
 import org.robolectric.shadows.ShadowPendingIntent;
 
 import static org.junit.Assert.assertEquals;
 import static org.mockito.Matchers.eq;
-import static org.mockito.Mockito.times;
 import static org.mockito.Mockito.verify;
 import static org.mockito.Mockito.when;
 import android.app.AlarmManager;

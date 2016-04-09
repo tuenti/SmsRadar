@@ -13,20 +13,28 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-package org.vaslabs.smsradar;
+package com.tuenti.smsradar;
 
 /**
- * The SmsStorage has the responsibility to store the last sms intercepted by the library.
+ * This interface has to be implemented to be notified when an sms be received or sent.
  *
- * @author Pedro Vicente Gómez Sánchez <pgomez@tuenti.com>
+ * @author Pedro Vcente Gómez Sánchez <pgomez@tuenti.com>
  * @author Manuel Peinado <mpeinado@tuenti.com>
  */
-interface SmsStorage {
+public interface SmsListener {
 
+	/**
+	 * Invoked when an incoming sms is intercepted.
+	 *
+	 * @param sms intercepted.
+	 */
+	public void onSmsSent(Sms sms);
 
-	void updateLastSmsIntercepted(int smsId);
+	/**
+	 * Invoked when an outgoing sms is intercepted.
+	 *
+	 * @param sms
+	 */
+	public void onSmsReceived(Sms sms);
 
-	int getLastSmsIntercepted();
-
-	boolean isFirstSmsIntercepted();
 }

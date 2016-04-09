@@ -13,7 +13,7 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-package org.vaslabs.smsradar;
+package com.tuenti.smsradar;
 
 
 import android.app.AlarmManager;
