@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
-    package="org.vaslabs.smsradar">
+    package="com.tuenti.smsradar">
 
     <uses-permission android:name="android.permission.READ_SMS"/>
 
@@ -11,13 +11,13 @@
 
 
         <activity
-            android:name=".MainActivity"
+            android:name="com.tuenti.smsradar.MainActivity"
             android:label="@string/app_name">
         </activity>
 
         <!-- Services -->
         <service
-            android:name="org.vaslabs.smsradar.SmsRadarService"
+            android:name="com.tuenti.smsradar.SmsRadarService"
             android:exported="false"
             android:label="@string/app_name"/>
 
