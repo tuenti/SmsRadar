@@ -14,7 +14,7 @@ allprojects {
 
 ```groovie
 dependencies{
-    compile 'org.vaslabs.smsradar:smsradar-library:2.0.0'
+	compile 'com.github.vaslabs:SmsRadar:2.0.1'
 }
 ```
 
