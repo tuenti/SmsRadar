@@ -26,6 +26,7 @@ import org.mockito.Mock;
 import org.mockito.MockitoAnnotations;
 import org.robolectric.RobolectricTestRunner;
 import org.robolectric.Shadows;
+import org.robolectric.annotation.Config;
 import org.robolectric.shadows.ShadowIntent;
 import org.robolectric.shadows.ShadowPendingIntent;
 
@@ -46,6 +47,7 @@ import android.net.Uri;
  * @author Manuel Peinado <mpeinado@tuenti.com>
  */
 @RunWith(RobolectricTestRunner.class)
+@Config(constants = BuildConfig.class, sdk = 21, manifest = "src/main/AndroidManifest.xml", packageName = "com.tuenti.smsradar")
 public class SmsRadarServiceTest {
 
 	private static final Intent ANY_INTENT = new Intent();
