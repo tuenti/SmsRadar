@@ -15,17 +15,19 @@
  */
 package com.tuenti.smsradar;
 
+
+import static junit.framework.Assert.assertEquals;
+import static org.junit.Assert.assertTrue;
+
+import android.content.Context;
+import android.content.SharedPreferences;
+
 import org.junit.After;
 import org.junit.Before;
 import org.junit.Test;
 import org.junit.runner.RunWith;
-import org.robolectric.Robolectric;
 import org.robolectric.RobolectricTestRunner;
-
-import static junit.framework.Assert.assertEquals;
-import static org.junit.Assert.assertTrue;
-import android.content.Context;
-import android.content.SharedPreferences;
+import org.robolectric.RuntimeEnvironment;
 
 
 /**
@@ -71,8 +73,10 @@ public class SharedPreferencesSmsStorageTest {
 		assertTrue(smsStorage.isFirstSmsIntercepted());
 	}
 
+
+
 	private void initializeSmsStorage() {
-		sharedPreferences = Robolectric.application.getSharedPreferences(SHARED_PREFERENCES_PATH,
+		sharedPreferences = RuntimeEnvironment.application.getSharedPreferences(SHARED_PREFERENCES_PATH,
 				Context.MODE_PRIVATE);
 		smsStorage = new SharedPreferencesSmsStorage(sharedPreferences);
 	}

@@ -24,14 +24,14 @@ import org.junit.runner.RunWith;
 import org.mockito.ArgumentCaptor;
 import org.mockito.Mock;
 import org.mockito.MockitoAnnotations;
-import org.robolectric.Robolectric;
 import org.robolectric.RobolectricTestRunner;
+import org.robolectric.Shadows;
+import org.robolectric.annotation.Config;
 import org.robolectric.shadows.ShadowIntent;
 import org.robolectric.shadows.ShadowPendingIntent;
 
 import static org.junit.Assert.assertEquals;
 import static org.mockito.Matchers.eq;
-import static org.mockito.Mockito.times;
 import static org.mockito.Mockito.verify;
 import static org.mockito.Mockito.when;
 import android.app.AlarmManager;
@@ -47,6 +47,7 @@ import android.net.Uri;
  * @author Manuel Peinado <mpeinado@tuenti.com>
  */
 @RunWith(RobolectricTestRunner.class)
+@Config(constants = BuildConfig.class, sdk = 21, manifest = "src/main/AndroidManifest.xml", packageName = "com.tuenti.smsradar")
 public class SmsRadarServiceTest {
 
 	private static final Intent ANY_INTENT = new Intent();
@@ -111,8 +112,8 @@ public class SmsRadarServiceTest {
 		verify(mockedAlarmManager).set(eq(AlarmManager.RTC_WAKEUP), eq(ANY_TIME + ONE_SECOND),
 				pendingIntentArgumentCaptor.capture());
 		PendingIntent capturedPendingIntent = pendingIntentArgumentCaptor.getValue();
-		ShadowPendingIntent pendingIntent = Robolectric.shadowOf(capturedPendingIntent);
-		ShadowIntent intent = Robolectric.shadowOf(pendingIntent.getSavedIntent());
+		ShadowPendingIntent pendingIntent = Shadows.shadowOf(capturedPendingIntent);
+		ShadowIntent intent = Shadows.shadowOf(pendingIntent.getSavedIntent());
 		assertEquals(SmsRadarService.class, intent.getIntentClass());
 	}
 
