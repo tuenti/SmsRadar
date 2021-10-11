@@ -123,6 +123,7 @@ public class SmsRadarService extends Service {
 	}
 
 	private void unregisterSmsContentObserver() {
+		if(smsObserver!=null)
 		contentResolver.unregisterContentObserver(smsObserver);
 	}
 
